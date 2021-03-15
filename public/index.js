@@ -25,8 +25,10 @@ const rotationRight = {
 }
 
 let messageToInput = "Quais são as coordenadas iniciais?"
-let sonda = 0
 let coordinatesMove = 0
+let messageToInputCoordinatesToMove = "Insira as instruções de movimento da Sonda!"
+let messageToInputCoordinates = "Insira as cordenadas da Sonda!"
+
 function validateMalha(){
     if(positionSonda[0].y > 5 || positionSonda[0].y < 0 ){
         console.log("Sonda saiu da malha na posição y")
@@ -40,7 +42,6 @@ function validateMalha(){
 }
 
 function moveFront(){
-    let indexSondaMove = 0
     let direction = positionSonda[0].looking
     positionSonda[0].y = parseInt(positionSonda[0].y)
     positionSonda[0].x = parseInt(positionSonda[0].x)
@@ -54,16 +55,16 @@ function moveFront(){
    return true
    
 }
+
 function rotateLeft(){
-    let indexSondaLft = 0
     let direction = positionSonda[0].looking
    if(direction == 'N') positionSonda[0].looking = rotationLeft.N
    if(direction == 'S') positionSonda[0].looking = rotationLeft.S
    if(direction == 'E') positionSonda[0].looking = rotationLeft.E
    if(direction == 'W') positionSonda[0].looking = rotationLeft.W
 }
+
 function rotateRight(){
-    let indexSondarRgt = 0
     let direction = positionSonda[0].looking
    if(direction == 'N') positionSonda[0].looking = rotationRight.N
    if(direction == 'S') positionSonda[0].looking = rotationRight.S
@@ -104,6 +105,7 @@ function moveSonda(value) {
     
     return positionSonda;
 }
+
 function validateInputCoordinates(value) {
     value = value.toUpperCase()
     if (validateInput(value)) {
@@ -119,6 +121,7 @@ function validateInputCoordinates(value) {
         return true
     }
 }
+
 function validateInput(value) {
     if (!value) {
         console.log("Insira um valor Valido")
@@ -135,6 +138,7 @@ function validateInput(value) {
     }
     return true
 }
+
 function validateInputCoordinatesToMove(values) {
     
     values = values.toUpperCase()
@@ -156,7 +160,6 @@ function initExploreMars() {
         coordinates()
     })
 }
-messageToInputCoordinates = "Insira as cordenadas da Sonda!"
 
 function coordinates() {
     
@@ -169,7 +172,6 @@ function coordinates() {
     })
 }
 
-messageToInputCoordinatesToMove = "Insira as instruções de movimento da Sonda!"
 function coordinatesToMove() {
     coordinatesMove++
     readline.question(messageToInputCoordinatesToMove, (value) => {

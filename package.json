@@ -11,5 +11,9 @@
     "url": "explorando-marte"
   },
   "author": "pharaujo",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "jasmine": "^3.6.4"
+  }
 }
