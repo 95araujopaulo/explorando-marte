@@ -9,7 +9,6 @@ let positionSonda = [{
     looking: "N"
 }]
 
-
 const rotationLeft = {
     N: "W",
     S: "E",

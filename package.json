@@ -2,9 +2,10 @@
   "name": "explorando-marte",
   "version": "1.0.0",
   "description": "Xerpa testing STDIO Pharaujo",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
-    "test": "npm test"
+    "test": "npm test",
+    "start": "node ./src/index"
   },
   "repository": {
     "type": "git",
