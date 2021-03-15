@@ -1,0 +1,15 @@
+{
+  "name": "explorando-marte",
+  "version": "1.0.0",
+  "description": "Xerpa testing STDIO Pharaujo",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "explorando-marte"
+  },
+  "author": "pharaujo",
+  "license": "ISC"
+}
