@@ -29,3 +29,13 @@ A saída deverá contar uma linha para cada sonda, na mesma ordem de entrada, in
 
 # Objetivo :pushpin:
 Com base nas informações apresentadas, criar um programa que processe uma série de instruções enviadas para as sondas que estão explorando o planalto.
+
+# ToStart 
+
+Instale as dependencias
+npm install 
+
+Starte o projeto 
+npm start
+
+Input e output pelo CLI
