@@ -35,7 +35,10 @@ Com base nas informações apresentadas, criar um programa que processe uma sér
 Instale as dependencias
 npm install 
 
-Starte o projeto 
+Start doo projeto 
 npm start
+
+para rodar testes 
+npm run test 
 
 Input e output pelo CLI
