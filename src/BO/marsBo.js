@@ -42,8 +42,9 @@ function moveFront() {
     if (direction == 'S') positionSonda[0].y -= 1
     if (direction == 'E') positionSonda[0].x += 1
     if (direction == 'W') positionSonda[0].x -= 1
-    if (!validateMalha(0)) {
+    if (!validateMalha()) {
         console.log("A suas movimentações causaram um acidente com a sonda")
+        
     }
     return true
 
@@ -89,6 +90,10 @@ function validateInputCoordinates(value) {
             console.log("Insira coordenadas completas!")
             return false
         }
+        if (value.length > 3) {
+            console.log("Insira apenas as coordenadas da sonda, exemplo: 5 5 S.")
+            return false
+        }
         if ((value[2] != 'N') && (value[2] != 'S') && (value[2] != 'E') && (value[2] != 'W')) {
             console.log("Informe uma direção valida! Direções possiveis, N, S, E e W.")
             return false
@@ -122,6 +127,10 @@ function validateInputCoordinatesToMove(values) {
             console.log(values[i] + ', Não é um comando valido, os comandos possíveis são L, R e M.')
             return false
         }
+    }
+    if (values.length == 0){
+        console.log('Insira um comando valido, os comandos possíveis são L, R e M.')
+        return false
     }
     return true
 }

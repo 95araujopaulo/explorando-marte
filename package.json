@@ -4,8 +4,9 @@
   "description": "Xerpa testing STDIO Pharaujo",
   "main": "src/index.js",
   "scripts": {
-    "test": "npm test",
-    "start": "node ./src/index"
+    "testjasmine": "jasmine spec/marsSpec.js",
+    "start": "node ./src/index",
+    "test": "nyc --reporter=text jasmine"
   },
   "repository": {
     "type": "git",
@@ -13,8 +14,15 @@
   },
   "author": "pharaujo",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "nyc": "^15.1.0"
+  },
   "devDependencies": {
-    "jasmine": "^3.6.4"
+    "jasmine": "^3.6.4",
+    "jasmine-console-reporter": "^3.1.0",
+    "jasmine-node": "^3.0.0",
+    "jasmine-supertest": "^1.0.0",
+    "mocha": "^8.3.2",
+    "supertest": "^6.1.3"
   }
 }
